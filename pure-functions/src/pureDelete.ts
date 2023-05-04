@@ -16,3 +16,16 @@ const pureDelete = <T>(
 //     In this case, the callback function is defined as (val, index) => { cb(val, index) == false; }.
 //     It takes two arguments - val (a value from the array) and index (an optional index of the value in the array) - and checks if the result of calling the cb() function with those arguments is false.
 //     If the result is false, the element is excluded from the new array.
+
+// Testing pureDelete function!
+const mixedArray: object[] = [
+  [],
+  { name: "Jack" },
+  { name: "Jane", age: 32 },
+  ["description"],
+];
+const objectsOnly: object[] = pureDelete(mixedArray, (val) =>
+  Array.isArray(val)
+);
+
+console.log(mixedArray, objectsOnly); // [ [], { name: 'Jack' }, { name: 'Jane', age: 32 }, [ 'description' ] ], [ { name: 'Jack' }, { name: 'Jane', age: 32 } ]
