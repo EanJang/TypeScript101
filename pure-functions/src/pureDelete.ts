@@ -1,10 +1,7 @@
 const pureDelete = <T>(
   array: readonly T[],
-  cb: (val: T, index?: number) => boolean
-): T[] =>
-  array.filter((val, index) => {
-    cb(val, index) == false;
-  });
+  callBack: (val: T, index?: number) => boolean
+): T[] => array.filter((val, index) => callBack(val, index) == false);
 
 // This function takes an array and a callback function as input. It then applies the filter() method to the input array and checks each element of the array against the callback function.
 // If the callback function returns false for an element, that element is excluded from the new array that is returned by the function.
