@@ -11,3 +11,9 @@ const pureSort = <T>(array: readonly T[]): T[] => {
 // (array: readonly T[]) -> This is the function parameter. It expects an array of type T, which is specified by the generic type parameter <T>.
 //      The readonly keyword indicates that the array should not be modified within the function, which makes this function 'pure'.
 // : T[] -> This is the return type of the function. It indicates that the function will return an array of type T.
+
+// Testing pureSort function!
+let beforeSort = [2, 4, 1, 3];
+const afterSort = pureSort(beforeSort);
+
+console.log(beforeSort, afterSort); //[2, 4, 1, 3], [1, 2, 3, 4]
