@@ -12,3 +12,15 @@ export const mergeArray = <T>(...arrays: readonly T[][]): T[] => {
 
   return result;
 };
+// <T>
+//    -> a generic type parameter to make the function work with any type of data
+// (...arrays: readonly T[][])
+//    -> a rest parameter that allows the function to accept an unspecified number of arrays of type T.
+//       the `readonly` keyword makes sure the arrays cannot be modified within the function.
+// : T[] =>
+//    -> indicates the return type of the function is an array of type `T`
+// let result: T[] = [];
+//    -> initializes an empty array result of type T and loops through each array passed as an argument using a for loop.
+//       the current array is extracted from the rest parameter `arrays` in each loop.
+// result = [...result, ...array];
+//    -> spread operator is used here to concatenate `result` and `array`
