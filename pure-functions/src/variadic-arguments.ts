@@ -24,3 +24,9 @@ export const mergeArray = <T>(...arrays: readonly T[][]): T[] => {
 //       the current array is extracted from the rest parameter `arrays` in each loop.
 // result = [...result, ...array];
 //    -> spread operator is used here to concatenate `result` and `array`
+
+// test
+const merged1: string[] = mergeArray(["Hello"], ["World"]);
+const merged2: number[] = mergeArray([2, 0], [2], [3]);
+
+console.log(merged1, merged2);
