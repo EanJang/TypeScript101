@@ -18,3 +18,7 @@ const doSomething = (): ResultType => {
     return [false, e.message]; // and the catch phrase catches the thrown object and returns a tuple type of 'ResultType'
   }
 };
+
+// test doSomething function!
+const [result, errorMsg] = doSomething(); // a destructuring assignment that extracts the two elements of the ResultType tuple returned by the doSomething function and assigns them to the variables result and errorMsg.
+console.log(result, errorMsg);
