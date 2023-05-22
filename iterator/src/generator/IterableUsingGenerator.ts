@@ -24,3 +24,9 @@ class IterableUsingGenerator<T> implements Iterable<T> {
 // while (this.currentIndex < this.values.length) yield this.values[this.currentIndex++];:
 //  This is the body of the generator function. It uses a while loop to iterate over the values in the values array.
 //  The loop continues as long as the currentIndex is less than the length of the values array. On each iteration, the generator yields the value at the current index (this.values[this.currentIndex]) and increments the currentIndex using the post-increment operator (this.currentIndex++).
+
+// test Iterable!
+for (let item of new IterableUsingGenerator([1, 2, 3])) console.log(item);
+
+for (let item of new IterableUsingGenerator(["hellooo", "world", "<3"]))
+  console.log(item);
